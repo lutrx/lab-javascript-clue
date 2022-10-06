@@ -158,9 +158,21 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function selectRandom() {}
+function selectRandom(arr) {
+    if (arr.length === 1) {
+        return arr[0];
+    } else {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+}
 
-function pickMystery() {}
+function pickMystery() {
+    let Mystery = {};
+    Mystery.suspect = selectRandom(suspectsArray);
+    Mystery.weapon = selectRandom(weaponsArray);
+    Mystery.room = selectRandom(roomsArray);
+    return Mystery;
+}
 
 
 // ITERATION 3
